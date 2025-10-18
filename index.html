@@ -4,10 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Alyzande Renard Portfolio and CV">
-  <meta name="author" content="Alyzande">
+  <meta name="author" content="Alyzande Renard">
   <title>Alyzande Renard MSc MBCS — Digital Capability & Learning Specialist</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -16,16 +19,19 @@
       --cobblestone: #A89A8E; /* Neutral text */
       --rosetan: #D19C97; /* Accent */
       --gardenia: #F7F3EE; /* Lightened Background */
-      --viola: #8C6FA6; /* Darkened Pantone Viola */
+      --viola: #8C6FA6; /* Deepened Viola */
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--gardenia); color: var(--cobblestone); }
+    html, body {
+      height: 100%;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--gardenia);
+      color: var(--cobblestone);
+    }
 
     a { color: var(--mocha); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Sidebar */
     #sideNav {
       position: fixed;
       top: 0; left: 0;
@@ -67,31 +73,29 @@
 
     #sideNav a:hover { color: var(--gardenia); }
 
-    /* Main */
     .container {
       margin-left: 250px;
       padding: 2rem 3rem;
       max-width: 900px;
-      color: var(--cobblestone);
-      background-color: var(--gardenia);
     }
 
     header.hero {
       margin-bottom: 3rem;
       text-align: left;
-      background: none;
-      box-shadow: none;
     }
+
     header.hero h1 {
       font-size: 2.6rem;
       color: var(--viola);
       font-weight: 700;
     }
+
     header.hero h2 {
       color: var(--viola);
       font-size: 1.2rem;
       margin-top: 0.5rem;
     }
+
     header.hero .subheading {
       color: var(--cobblestone);
       margin-top: 0.5rem;
@@ -101,6 +105,7 @@
       flex-wrap: wrap;
       gap: 0.5rem;
     }
+
     .social-inline a {
       margin-left: 0.5rem;
       color: var(--mocha);
@@ -111,15 +116,37 @@
 
     h2, h3 { font-weight: 600; color: var(--mocha); }
 
-    ul { margin-left: 1.5rem; }
-    li { margin: 0.3rem 0; }
+    /* Bootstrap card customisation */
+    .project-card {
+      background-color: var(--gardenia);
+      border: 1px solid var(--rosetan);
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
 
-    .resume-item { margin-bottom: 2rem; }
+    .project-card .card-title {
+      color: var(--viola);
+      font-weight: 600;
+    }
 
-    hr { border: none; border-top: 1px solid var(--rosetan); margin: 2rem 0; }
+    .project-card .card-text {
+      color: var(--cobblestone);
+    }
+
+    .project-card em {
+      color: var(--mocha);
+      font-size: 0.9rem;
+    }
 
     @media(max-width: 768px) {
-      #sideNav { position: relative; width: 100%; height: auto; flex-direction: row; justify-content: space-around; }
+      #sideNav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+      }
       .container { margin: 0; padding: 1.5rem; }
       #sideNav ul { display: flex; justify-content: center; flex-wrap: wrap; }
     }
@@ -138,7 +165,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Programming Languages & Tools</a></li>
-      <li><a href="#certifications">Certifications & Development</a></li>
+      <li><a href="#certifications">Certifications</a></li>
     </ul>
   </nav>
 
@@ -155,129 +182,34 @@
       </div>
     </header>
 
-    <section id="about">
-      <h2>Professional Summary</h2>
-      <p>Alyzande is a Digital Learning Consultant who combines expertise in AI, data, and coaching to design inclusive, technology-enhanced learning. She mentors degree apprentices, delivers feedback aligned with university standards, and uses digital tools to support every learner’s success. Her recent projects apply machine learning and natural-language processing to educational and social-data contexts, showing a balance of human-centred design and technical curiosity.</p>
-    </section>
-
-    <hr>
-
     <section id="projects">
       <h2>Selected Projects</h2>
 
-      <p><strong>Shadow Fleet Tracker — Maritime Intelligence Platform (2025)</strong> (In Progress)<br>
-      A real-time maritime intelligence platform that detects and visualises suspicious vessel activity using global AIS (Automatic Identification System) data. Combines a Python geospatial backend (Flask, GeoPandas, Shapely) with a Leaflet.js dashboard to monitor vessels near critical undersea infrastructure.<br>
-      Key features: Real-time AIS ingestion and anomaly detection, geofencing alerts, interactive dashboard, modular integration with satellite and sanctions data.<br>
-      <em>Technologies: Python, Flask/FastAPI, WebSockets, GeoPandas, Leaflet.js, JavaScript, AISStream.io, TeleGeography GeoJSON.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>Russian Sentiment Analysis Bot</strong><br>
-      Python web app analysing Russian text sentiment using RuBERT transformer models via the Hugging Face API. Built with Flask and JavaScript frontend for interactive sentiment visualisation.<br>
-      Key features: Text classification via BERT, multilingual UI, REST API integration.<br>
-      <em>Technologies: Python, Flask, Hugging Face, JavaScript.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>VK Sentiment Bot</strong><br>
-      Extends the sentiment system to Russian social-media and news data using the VK API, automating collection and analysis of trending topics.<br>
-      Key features: API integration with VK, batch sentiment scoring, time-series visualisation of sentiment trends.<br>
-      <em>Technologies: Python, Flask, VK API, Chart.js.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>EuroPulse (Work in Progress)</strong><br>
-      Aggregates Reddit, Mastodon, and Bluesky social data to detect European public-safety incidents in French and German.<br>
-      Key features: NLP-driven multilingual sentiment and event detection, federated social data integration, interactive mapping.<br>
-      <em>Technologies: Python, Node.js, Mastodon & Reddit APIs.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>AI-Driven EdTech Learning Channel</strong><br>
-      Generates PowerPoint, TTS audio, and video learning content from apprenticeship KSB data, supporting self-directed learners.<br>
-      Key features: Automated content generation, text-to-speech and video synthesis, adaptive AI-driven topic sequencing.<br>
-      <em>Technologies: Python, Narakeet, Canva, PowerPoint automation.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>Warm & Safe (warmbanks.net)</strong><br>
-      Maps UK community “Warm Banks” — public venues providing warmth and support — using OpenStreetMap data and accessible web design. Previously hosted at warmbanks.net for a year.<br>
-      Key features: CRUD functionality, accessibility-first interface, live geolocation filtering, secure JWT authentication.<br>
-      <em>Technologies: HTML, CSS, JavaScript, Node.js, Express, MongoDB, Leaflet.js.</em><br>
-      📸 [Screenshot placeholder]</p>
-
-      <p><strong>Smart Wardrobe</strong><br>
-      A computer-vision web app that recognises clothing and suggests weather-appropriate outfits, integrating AWS Rekognition and OpenWeather APIs.<br>
-      Key features: Image classification, weather-based recommendations, responsive user dashboard.<br>
-      <em>Technologies: LAMP Stack, PHP, AWS Rekognition.</em><br>
-      📸 [Screenshot placeholder]</p>
-    </section>
-
-    <hr>
-
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="resume-item">
-        <h3>2025 – Present · Digital Learning Consultant, QA Ltd (Remote)</h3>
-        <ul>
-          <li>Coach and mentor degree apprentices in Digital & Technology Solutions, guiding them to develop strong technical and professional competencies.</li>
-          <li>Conduct one-to-one reviews, assess portfolio evidence, and provide structured feedback aligned with apprenticeship KSBs and university standards.</li>
-          <li>Mark and assess academic assignments, including Software Engineering Fundamentals (Python), to Northumbria University criteria.</li>
-          <li>Support learner engagement and progression through adaptive coaching and empathetic communication. Enhanced DBS.</li>
-          <li>Contribute to QA’s Good Ofsted outcome and co-facilitate monthly Neurodiversity Champion sessions promoting inclusion and peer support.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>2024 · Data Analyst Skills Coach, BPP University</h3>
-        <ul>
-          <li>Supported L3-4 Data Apprentices in analytics, Power BI, and data literacy.</li>
-          <li>Delivered reflective feedback linking theory to workplace application.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>2023 · Software & Data Coach, Estio Training</h3>
-        <ul>
-          <li>Created interactive coding and data projects for online delivery.</li>
-          <li>Improved learner outcomes from failing to consistent pass/distinction.</li>
-        </ul>
-      </div>
-
-      <div class="resume-item">
-        <h3>2021 – 2023 · Coach & Learning Mentor, The Developer Academy</h3>
-        <ul>
-          <li>Delivered full-stack teaching (HTML, CSS, JavaScript, React, Node.js).</li>
-          <li>Delivered technical training and one-to-one coaching, supporting coding assignments, progress reviews, and career development including CV and interview preparation.</li>
-        </ul>
+      <!-- Sample Bootstrap card for one project -->
+      <div class="card project-card">
+        <img src="img/shadowfleet-placeholder.jpg" class="card-img-top" alt="Shadow Fleet Tracker Screenshot Placeholder">
+        <div class="card-body">
+          <h3 class="card-title">Shadow Fleet Tracker — Maritime Intelligence Platform (2025) <em>(In Progress)</em></h3>
+          <p class="card-text">
+            A real-time maritime intelligence platform that detects and visualises suspicious vessel activity using global AIS (Automatic Identification System) data. Combines a Python geospatial backend (Flask, GeoPandas, Shapely) with a Leaflet.js dashboard to monitor vessels near critical undersea infrastructure.
+          </p>
+          <p class="card-text">
+            <strong>Key features:</strong> Real-time AIS ingestion and anomaly detection, geofencing alerts, interactive dashboard, modular integration with satellite and sanctions data.
+          </p>
+          <p class="card-text">
+            <em>Technologies: Python, Flask/FastAPI, WebSockets, GeoPandas, Leaflet.js, JavaScript, AISStream.io, TeleGeography GeoJSON.</em>
+          </p>
+          <a href="#" class="btn btn-outline-secondary btn-sm">View Project</a>
+        </div>
       </div>
     </section>
 
-    <hr>
-
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>MSc Computing</strong>, Sheffield Hallam University — University Prize for Industrial Expertise</p>
-      <p><strong>BA (Hons) Business and Management</strong>, Oxford Brookes University</p>
-    </section>
-
-    <hr>
-
-    <section id="skills">
-      <h2>Programming Languages & Tools</h2>
-      <p>Python (AI, NLP, Data) | Flask | HTML | CSS | JavaScript | Bootstrap 5 | React | Node.js | Express | MySQL | MongoDB | LAMP Stack (Linux, Apache, MySQL, PHP) | Git/GitHub | Bash | Hugging Face | REST APIs | OpenStreetMap API | Leaflet.js | JSON Web Tokens (JWT) | AWS (S3, Rekognition) | C# | Power BI (coaching) | Data Modelling | CompTIA DATA+ | AI Ethics & Responsible Use</p>
-    </section>
-
-    <hr>
-
-    <section id="certifications">
-      <h2>Certifications & Development</h2>
-      <ul>
-        <li>AWS Certified Cloud Practitioner (in progress)</li>
-        <li>CompTIA DATA+ (Firebrand)</li>
-        <li>Safeguarding | Prevent | British Values | DE&I | Neurodiversity Champion (QA Ltd)</li>
-      </ul>
-    </section>
-
-    <footer>
-      <p style="color:var(--cobblestone); font-size:0.9rem; margin-top:3rem;">© Alyzande Renard · Last updated October 2025</p>
+    <footer class="mt-5">
+      <p style="color:var(--cobblestone); font-size:0.9rem;">© Alyzande Renard · Last updated October 2025</p>
     </footer>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
