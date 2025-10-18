@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Alyzande Renard Portfolio and CV">
+  <meta name="description" content="AI and OSINT projects by Alyzande Renard MSc MBCS — using language, data, and machine learning for societal resilience and national security.">
+  <meta name="keywords" content="AI, Machine Learning, NLP, OSINT, Intelligence Analysis, Python, Flask, Data Science, Cybersecurity, Geospatial Analysis, Hugging Face, Leaflet.js, Cloud Computing, Open Source Intelligence, UK Security, Linguistics, French, German, Russian">
   <meta name="author" content="Alyzande Renard">
-  <title>Alyzande Renard MSc MBCS — Digital Capability & Learning Specialist</title>
+  <title>Alyzande Renard MSc MBCS — AI, OSINT & Digital Capability</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -74,11 +73,13 @@
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
+      transition: transform 0.2s ease;
     }
-    .project-card .card-title { color: var(--viola); font-weight: 600; }
+    .project-card:hover { transform: translateY(-3px); }
+
+    .project-card .card-title { color: var(--mocha); font-weight: 600; }
     .project-card .card-text { color: var(--cobblestone); }
 
-    /* Custom Button */
     .btn-alyzande {
       border: 1px solid var(--rosetan);
       color: #fff;
@@ -130,7 +131,7 @@
 
     <section id="about">
       <h2>Professional Summary</h2>
-      <p>Alyzande is a Digital Learning Consultant who combines expertise in AI, data, and coaching to design inclusive, technology-enhanced learning. She mentors degree apprentices, delivers feedback aligned with university standards, and uses digital tools to support every learner’s success. Her recent projects apply machine learning and natural-language processing to educational and social-data contexts, showing a balance of human-centred design and technical curiosity.</p>
+      <p>Alyzande is a Digital Learning Consultant who combines expertise in AI, data, and coaching to design inclusive, technology-enhanced learning. She mentors degree apprentices, delivers feedback aligned with university standards, and uses digital tools to support every learner’s success. Her projects apply natural language processing, data analytics, and human-centred design to real-world intelligence and learning contexts.</p>
     </section>
 
     <hr>
@@ -143,8 +144,8 @@
         <img src="img/shadowfleet-placeholder.jpg" class="card-img-top" alt="Shadow Fleet Tracker Screenshot">
         <div class="card-body">
           <h3 class="card-title">Shadow Fleet Tracker — Maritime Intelligence Platform (2025, In Progress)</h3>
-          <p class="card-text">A real-time maritime intelligence platform detecting and visualising suspicious vessel activity using global AIS data. Combines a Python geospatial backend with a Leaflet.js dashboard to monitor vessels near undersea infrastructure.</p>
-          <p class="card-text"><strong>Key features:</strong> Real-time AIS ingestion, anomaly detection, geofencing alerts, live dashboard, modular satellite-data integration.</p>
+          <p class="card-text">A real-time maritime intelligence and anomaly-detection system analysing AIS vessel telemetry to identify high-risk behaviour such as loitering or flag irregularities. Designed for open-source maritime domain awareness (MDA) and threat intelligence applications.</p>
+          <p class="card-text"><strong>Key features:</strong> Real-time AIS ingestion, anomaly detection, geofencing alerts, interactive dashboard, modular data integration.</p>
           <p class="card-text"><em>Technologies: Python, Flask/FastAPI, GeoPandas, Leaflet.js, WebSockets, JavaScript.</em></p>
           <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
@@ -155,8 +156,8 @@
         <img src="img/ru-sentiment-placeholder.jpg" class="card-img-top" alt="Russian Sentiment Bot Screenshot">
         <div class="card-body">
           <h3 class="card-title">Russian Sentiment Analysis Bot (2025)</h3>
-          <p class="card-text">Analyses Russian text sentiment using Hugging Face transformer models and processes live Russian news headlines via API feeds.</p>
-          <p class="card-text"><strong>Key features:</strong> ML sentiment analysis, multilingual interface, API data integration.</p>
+          <p class="card-text">A natural language processing tool analysing both user-inputted Russian text and live Russian news headlines for sentiment. Demonstrates ability to integrate multiple APIs and machine-learning models for language intelligence.</p>
+          <p class="card-text"><strong>Key features:</strong> Dual-mode sentiment analysis (headline or custom input), Hugging Face transformer models, multilingual interface.</p>
           <p class="card-text"><em>Technologies: Python, Flask, Hugging Face, JavaScript.</em></p>
           <a href="https://github.com/Alyzande/ru_sentiment_bot" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
@@ -167,9 +168,9 @@
         <img src="img/vk-sentiment-placeholder.jpg" class="card-img-top" alt="VK Sentiment Bot Screenshot">
         <div class="card-body">
           <h3 class="card-title">vKontakte News Sentiment Analyser (2025)</h3>
-          <p class="card-text">Tracks and analyses Russian news posts on VK to measure sentiment on geopolitical events such as the Ukraine war, using Hugging Face ML models.</p>
-          <p class="card-text"><strong>Key features:</strong> API integration, sentiment aggregation, data visualisation.</p>
-          <p class="card-text"><em>Technologies: Python, Flask, Hugging Face, JavaScript, VK API.</em></p>
+          <p class="card-text">Extends the previous sentiment bot to analyse headlines posted by Russian news agencies on VK (vKontakte). Uses a curated dropdown of war-related keywords to assess domestic sentiment about the Ukraine conflict, combining API interaction with Russian-language NLP.</p>
+          <p class="card-text"><strong>Key features:</strong> API-driven data collection, topic filtering, sentiment visualisation, Russian-language analysis.</p>
+          <p class="card-text"><em>Technologies: Python, Flask, Hugging Face, VK API, JavaScript.</em></p>
           <a href="https://github.com/Alyzande/vk_sentiment_bot" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
@@ -179,8 +180,8 @@
         <img src="img/europulse-placeholder.jpg" class="card-img-top" alt="EuroPulse Screenshot">
         <div class="card-body">
           <h3 class="card-title">EuroPulse (2025 – Present)</h3>
-          <p class="card-text">Monitors European social-media platforms in French and German to detect real-time public-safety threats. Aggregates multilingual posts for situational awareness.</p>
-          <p class="card-text"><strong>Key features:</strong> Event detection, multilingual NLP, federated API data collection.</p>
+          <p class="card-text">A multilingual open-source intelligence (OSINT) platform monitoring European social platforms for emerging security threats. Uses NLP-driven event detection in French and German to enhance situational awareness and cross-border analysis.</p>
+          <p class="card-text"><strong>Key features:</strong> Event detection, multilingual NLP, social API integration, geospatial threat mapping.</p>
           <p class="card-text"><em>Technologies: Python, JavaScript, CSS, Reddit & Mastodon APIs.</em></p>
           <a href="https://github.com/Alyzande/EuroPulse" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
@@ -191,8 +192,8 @@
         <img src="img/aiedtech-placeholder.jpg" class="card-img-top" alt="AI EdTech Learning Channel Screenshot">
         <div class="card-body">
           <h3 class="card-title">AI-Driven EdTech Learning Channel (2024)</h3>
-          <p class="card-text">Generates PowerPoint, TTS audio, and video resources from apprenticeship KSB data, supporting self-directed learners through Narakeet and Canva automation.</p>
-          <p class="card-text"><strong>Key features:</strong> Automated learning-resource creation, TTS & video synthesis, adaptive content sequencing.</p>
+          <p class="card-text">Generates PowerPoint, TTS audio, and video resources from apprenticeship KSB data using Narakeet and Canva automation. Demonstrates AI-enabled content generation and adaptive learning resource design.</p>
+          <p class="card-text"><strong>Key features:</strong> Automated learning-resource creation, TTS & video synthesis, adaptive sequencing.</p>
           <p class="card-text"><em>Technologies: Python, Narakeet, Canva, PowerPoint automation.</em></p>
           <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
@@ -203,9 +204,9 @@
         <img src="img/warmandsafe-placeholder.jpg" class="card-img-top" alt="Warm & Safe Screenshot">
         <div class="card-body">
           <h3 class="card-title">Warm & Safe (2022)</h3>
-          <p class="card-text">Developed during an agile software consultancy at The Developer Academy, mapping community “Warm Banks” — public locations offering warmth and support in the UK.</p>
-          <p class="card-text"><strong>Key features:</strong> CRUD functionality, screen-reader accessibility, geolocation filtering, JWT authentication.</p>
-          <p class="card-text"><em>Technologies: HTML, CSS, JS, OpenStreetMap, Leaflet.js, Node.js, Express, MongoDB.</em></p>
+          <p class="card-text">Developed as part of an agile software consultancy, mapping UK “Warm Banks” — community venues offering warmth and support. Demonstrates open-data use, geospatial design, and accessibility-first development.</p>
+          <p class="card-text"><strong>Key features:</strong> CRUD functionality, screen-reader accessibility, JWT authentication, OpenStreetMap integration.</p>
+          <p class="card-text"><em>Technologies: HTML, CSS, JS, Node.js, Express, MongoDB, Leaflet.js.</em></p>
           <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
@@ -215,9 +216,9 @@
         <img src="img/smartwardrobe-placeholder.jpg" class="card-img-top" alt="Smart Wardrobe Screenshot">
         <div class="card-body">
           <h3 class="card-title">Smart Wardrobe (2021)</h3>
-          <p class="card-text">Computer-vision web app that recognises clothing items and suggests weather-appropriate outfits using AWS Rekognition and OpenWeather APIs.</p>
-          <p class="card-text"><strong>Key features:</strong> Image classification, weather-based outfit suggestions, responsive design.</p>
-          <p class="card-text"><em>Technologies: LAMP Stack (Linux, Apache, MySQL, PHP), AWS Rekognition.</em></p>
+          <p class="card-text">A computer-vision prototype that recognises clothing items and suggests weather-appropriate outfits using AWS Rekognition and OpenWeather APIs. Demonstrates secure cloud-based ML deployment and UX design.</p>
+          <p class="card-text"><strong>Key features:</strong> Image classification, weather-based recommendations, responsive dashboard.</p>
+          <p class="card-text"><em>Technologies: LAMP Stack, PHP, AWS Rekognition.</em></p>
           <a href="https://github.com/Alyzande/SmartWardrobe" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
@@ -234,7 +235,7 @@
           <li>Conduct reviews, assess portfolios, and deliver structured feedback aligned with KSBs.</li>
           <li>Assess assignments including Software Engineering Fundamentals (Python).</li>
           <li>Support learner engagement and progression with empathetic coaching.</li>
-          <li>Contribute to QA’s Good Ofsted outcome and co-facilitate Neurodiversity sessions.</li>
+          <li>Co-facilitate Neurodiversity sessions; contribute to QA’s Good Ofsted outcome.</li>
         </ul>
       </div>
 
@@ -275,7 +276,7 @@
 
     <section id="skills">
       <h2>Programming Languages & Tools</h2>
-      <p>Python (AI, NLP, Data) | Flask | HTML | CSS | JavaScript | Bootstrap 5 | React | Node.js | Express | MySQL | MongoDB | LAMP Stack | Git/GitHub | Bash | Hugging Face | REST APIs | OpenStreetMap API | Leaflet.js | JWT | AWS (S3, Rekognition) | C# | Power BI | Data Modelling | CompTIA DATA+ | AI Ethics & Responsible Use</p>
+      <p>Python (AI, NLP, Data) | Flask | HTML | CSS | JavaScript | Bootstrap 5 | React | Node.js | Express | MySQL | MongoDB | LAMP Stack | Git/GitHub | Bash | Hugging Face | REST APIs | Leaflet.js | JWT | AWS (S3, Rekognition) | C# | Power BI | Data Modelling | CompTIA DATA+ | AI Ethics | OSINT | Geospatial Analysis | Cross-linguistic NLP (French, German, Russian)</p>
     </section>
 
     <hr>
@@ -283,17 +284,4 @@
     <section id="certifications">
       <h2>Certifications & Development</h2>
       <ul>
-        <li>AWS Certified Cloud Practitioner (in progress)</li>
-        <li>CompTIA DATA+ (Firebrand)</li>
-        <li>Safeguarding | Prevent | British Values | DE&I | Neurodiversity Champion (QA Ltd)</li>
-      </ul>
-    </section>
-
-    <footer class="mt-5">
-      <p style="color:var(--cobblestone); font-size:0.9rem;">© Alyzande Renard · Updated October 2025</p>
-    </footer>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <li>AWS Certified Cloud Practitioner (in
