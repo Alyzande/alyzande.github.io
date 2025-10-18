@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +13,14 @@
 
   <style>
     :root {
-      --mocha: #A47764;      
-      --cobblestone: #A89A8E; 
-      --rosetan: #D19C97;    
-      --gardenia: #F7F3EE;   
-      --viola: #8C6FA6;      
+      --mocha: #A47764;
+      --cobblestone: #A89A8E;
+      --rosetan: #D19C97;
+      --gardenia: #F7F3EE;
+      --viola: #8C6FA6;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -40,11 +41,6 @@
       flex-direction: column;
       align-items: center;
       padding: 1rem;
-    }
-
-    #sideNav img {
-      border-radius: 50%; width: 150px; height: 150px;
-      object-fit: cover; margin: 1rem 0;
     }
 
     #sideNav ul {
@@ -103,9 +99,9 @@
 
 <body id="page-top">
   <nav id="sideNav">
-    <a href="#top"><img src="img/profile.jpg" alt="Alyzande Renard"></a>
     <h2>Alyzande Renard MSc MBCS</h2>
     <ul>
+      <li><a href="#top">Top</a></li>
       <li><a href="#about">Summary</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -138,81 +134,121 @@
     <section id="projects">
       <h2>Selected Projects</h2>
 
+      <!-- Project cards (same as before) -->
       <div class="card project-card">
-        <img src="img/shadowfleet-placeholder.jpg" class="card-img-top" alt="Shadow Fleet Tracker Screenshot">
         <div class="card-body">
-          <h3 class="card-title">Shadow Fleet Tracker, Maritime Intelligence Platform (2025, In Progress)</h3>
-          <p class="card-text">A real-time maritime intelligence and anomaly detection system analysing AIS vessel telemetry to identify high-risk behaviour such as loitering or flag irregularities. Designed for open-source maritime domain awareness and threat intelligence applications.</p>
-          <p class="card-text"><strong>Key features:</strong> Real-time AIS ingestion, anomaly detection, geofencing alerts, interactive dashboard, modular data integration.</p>
-          <p class="card-text"><em>Technologies: Python, Flask/FastAPI, GeoPandas, Leaflet.js, WebSockets, JavaScript.</em></p>
-          <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
+          <h3 class="card-title">Shadow Fleet Tracker (2025)</h3>
+          <p class="card-text">A real-time maritime intelligence system detecting suspicious vessel behaviour using AIS data. Demonstrates Python, Flask, GeoPandas, and Leaflet.js integration for open-source maritime domain awareness.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/ru-sentiment-placeholder.jpg" class="card-img-top" alt="Russian Sentiment Bot Screenshot">
         <div class="card-body">
           <h3 class="card-title">Russian Sentiment Analysis Bot (2025)</h3>
-          <p class="card-text">A natural language processing tool analysing both user-inputted Russian text and live Russian news headlines for sentiment. Demonstrates API integration and machine learning model deployment for language intelligence and cross-linguistic analytics.</p>
-          <p class="card-text"><strong>Key features:</strong> Dual-mode sentiment analysis, Hugging Face transformer models, multilingual interface.</p>
-          <p class="card-text"><em>Technologies: Python, Flask, Hugging Face, JavaScript.</em></p>
-          <a href="https://github.com/Alyzande/ru_sentiment_bot" class="btn btn-alyzande btn-sm">View Project</a>
+          <p class="card-text">Analyses sentiment in both Russian user input and real-time news headlines using Hugging Face transformers. Demonstrates multilingual NLP, Flask web app design, and sentiment visualisation in JavaScript.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/vk-sentiment-placeholder.jpg" class="card-img-top" alt="VK Sentiment Bot Screenshot">
         <div class="card-body">
           <h3 class="card-title">vKontakte News Sentiment Analyser (2025)</h3>
-          <p class="card-text">Extends the previous sentiment bot to analyse headlines posted by Russian news agencies on VK. Uses a curated dropdown of war-related keywords to assess domestic sentiment about the Ukraine conflict. Combines API interaction with Russian-language NLP and sentiment modelling.</p>
-          <p class="card-text"><strong>Key features:</strong> API-driven data collection, topic filtering, sentiment visualisation, Russian-language analysis.</p>
-          <p class="card-text"><em>Technologies: Python, Flask, Hugging Face, VK API, JavaScript.</em></p>
-          <a href="https://github.com/Alyzande/vk_sentiment_bot" class="btn btn-alyzande btn-sm">View Project</a>
+          <p class="card-text">Monitors Russian-language VK news posts to track sentiment about the Ukraine war using Hugging Face models. Demonstrates API data handling, Russian NLP, and topic-based classification.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/europulse-placeholder.jpg" class="card-img-top" alt="EuroPulse Screenshot">
         <div class="card-body">
-          <h3 class="card-title">EuroPulse (2025, Present)</h3>
-          <p class="card-text">A multilingual open-source intelligence system that monitors European social platforms including Reddit, Mastodon, and Bluesky to detect urgent reports from independent citizen journalists before major news outlets confirm them. Focuses on identifying emerging emergencies or security incidents such as terrorist attacks, fires, or large public safety threats. Demonstrates multilingual NLP, API integration, and early-warning analytics for protective intelligence applications.</p>
-          <p class="card-text"><em>Technologies: Python, JavaScript, CSS, Reddit API, Mastodon API, Bluesky API.</em></p>
-          <a href="https://github.com/Alyzande/EuroPulse" class="btn btn-alyzande btn-sm">View Project</a>
+          <h3 class="card-title">EuroPulse (2025)</h3>
+          <p class="card-text">A multilingual open-source intelligence system connecting to Reddit, Mastodon, and Bluesky APIs to detect breaking emergencies across Europe. Highlights French & German NLP, early-warning analysis, and threat detection.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/aiedtech-placeholder.jpg" class="card-img-top" alt="AI EdTech Learning Channel Screenshot">
         <div class="card-body">
           <h3 class="card-title">AI-Driven EdTech Learning Channel (2024)</h3>
-          <p class="card-text">Generates PowerPoint, text-to-speech audio, and video learning resources from apprenticeship KSB data using Narakeet and Canva automation. Demonstrates AI-enabled content generation and adaptive learning resource design.</p>
-          <p class="card-text"><strong>Key features:</strong> Automated learning-resource creation, video synthesis, adaptive sequencing.</p>
-          <p class="card-text"><em>Technologies: Python, Narakeet, Canva, PowerPoint automation.</em></p>
-          <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
+          <p class="card-text">Generates multimedia learning materials using Narakeet, Canva, and AI data processing for apprenticeship curricula. Demonstrates automation, text-to-speech, and digital content design.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/warmandsafe-placeholder.jpg" class="card-img-top" alt="Warm and Safe Screenshot">
         <div class="card-body">
           <h3 class="card-title">Warm and Safe (2022)</h3>
-          <p class="card-text">Developed as part of an agile software consultancy, mapping UK Warm Banks, community venues offering warmth and support. Demonstrates open-data use, geospatial design, and accessibility-first development.</p>
-          <p class="card-text"><strong>Key features:</strong> CRUD functionality, screen-reader accessibility, JWT authentication, OpenStreetMap integration.</p>
-          <p class="card-text"><em>Technologies: HTML, CSS, JS, Node.js, Express, MongoDB, Leaflet.js.</em></p>
-          <a href="#" class="btn btn-alyzande btn-sm">View Project</a>
+          <p class="card-text">Mapped UK Warm Banks using OpenStreetMap and Leaflet.js. Created an accessible, full CRUD web app with Node.js, Express, MongoDB, and JWT authentication.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
 
       <div class="card project-card">
-        <img src="img/smartwardrobe-placeholder.jpg" class="card-img-top" alt="Smart Wardrobe Screenshot">
         <div class="card-body">
           <h3 class="card-title">Smart Wardrobe (2021)</h3>
-          <p class="card-text">A computer-vision prototype that recognises clothing items and suggests weather-appropriate outfits using AWS Rekognition and OpenWeather APIs. Demonstrates secure cloud-based ML deployment and responsive UX design.</p>
-          <p class="card-text"><strong>Key features:</strong> Image classification, weather-based recommendations, responsive dashboard.</p>
-          <p class="card-text"><em>Technologies: LAMP Stack, PHP, AWS Rekognition.</em></p>
-          <a href="https://github.com/Alyzande/SmartWardrobe" class="btn btn-alyzande btn-sm">View Project</a>
+          <p class="card-text">A LAMP-stack web app using AWS Rekognition to suggest outfits based on weather and wardrobe content. Demonstrates AI image recognition and PHP backend integration.</p>
+          <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
         </div>
       </div>
+    </section>
+
+    <hr>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <h3>Digital Learning Consultant, QA Ltd (Remote, 2025 – Present)</h3>
+      <ul>
+        <li>Coach and mentor degree apprentices in Digital & Technology Solutions.</li>
+        <li>Assess portfolios, conduct one-to-one reviews, and provide feedback to university standards.</li>
+        <li>Mark assignments, support engagement, and promote inclusive learning.</li>
+      </ul>
+
+      <h3>Data Analyst Skills Coach, BPP University (2024)</h3>
+      <ul>
+        <li>Supported data apprentices in analytics, Power BI, and data literacy.</li>
+        <li>Delivered reflective feedback linking theory to workplace practice.</li>
+      </ul>
+
+      <h3>Software & Data Coach, Estio Training (2023)</h3>
+      <ul>
+        <li>Created interactive coding and data projects for online learners.</li>
+        <li>Improved learner outcomes to consistent pass/distinction.</li>
+      </ul>
+
+      <h3>Coach & Learning Mentor, The Developer Academy (2021 – 2023)</h3>
+      <ul>
+        <li>Taught full-stack web development (HTML, CSS, JavaScript, React, Node.js).</li>
+        <li>Supported coding assignments, reviews, and career development.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MSc Computing</strong>, Sheffield Hallam University — University Prize for Industrial Expertise</li>
+        <li><strong>BA (Hons) Business and Management</strong>, Oxford Brookes University</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="skills">
+      <h2>Programming Languages & Tools</h2>
+      <p>Python (AI, NLP, Data) · Flask · HTML · CSS · JavaScript · Bootstrap · React · Node.js · Express · MySQL · MongoDB · LAMP Stack · Git/GitHub · Bash · Hugging Face · REST APIs · Leaflet.js · AWS (S3, Rekognition) · C# · Power BI · Data Modelling · AI Ethics</p>
+    </section>
+
+    <hr>
+
+    <section id="certifications">
+      <h2>Certifications & Development</h2>
+      <ul>
+        <li>AWS Certified Cloud Practitioner (in progress)</li>
+        <li>CompTIA DATA+ (Firebrand)</li>
+        <li>Safeguarding | Prevent | British Values | DE&I | Neurodiversity Champion (QA Ltd)</li>
+      </ul>
     </section>
   </div>
 </body>
