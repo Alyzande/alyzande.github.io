@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Alyzande Renard CV Resume">
+  <meta name="description" content="Alyzande Renard Portfolio and CV">
   <meta name="author" content="Alyzande">
   <title>Alyzande Renard MSc MBCS — Digital Capability & Learning Specialist</title>
 
@@ -46,7 +46,6 @@
     }
 
     #sideNav h2 { color: #fff; text-align: center; }
-    #sideNav h3 { color: #fff; font-weight: normal; font-size: 0.95rem; text-align: center; margin-top: 0.5rem; }
 
     #sideNav ul {
       list-style: none;
@@ -74,22 +73,41 @@
       color: var(--blue);
     }
 
-    section { margin-bottom: 3rem; }
-
-    h1, h2, h3, h4 { font-weight: 600; color: var(--blue); }
-    h1 span.text-primary { color: var(--peach); }
-
-    .subheading { color: var(--blue); margin-bottom: 1rem; }
-    .lead { font-size: 1.1rem; margin-bottom: 1.5rem; }
-
-    ul { margin-left: 1.5rem; }
-    li { margin: 0.3rem 0; }
-
+    header.hero {
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+    header.hero h1 {
+      font-size: 2.2rem;
+      color: var(--blue);
+    }
+    header.hero h2 {
+      color: var(--peach);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    header.hero .subheading {
+      color: var(--blue);
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
     .social-icons a {
       margin-right: .75rem;
       color: var(--peach);
       font-size: 1.25rem;
     }
+
+    section { margin-bottom: 3rem; }
+
+    h2, h3 { font-weight: 600; color: var(--blue); }
+
+    ul { margin-left: 1.5rem; }
+    li { margin: 0.3rem 0; }
+
+    .resume-item { margin-bottom: 2rem; }
 
     hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
 
@@ -103,15 +121,14 @@
 
 <body id="page-top">
   <nav id="sideNav">
-    <a href="#about">
+    <a href="#top">
       <img src="img/profile.jpg" alt="Alyzande Renard">
     </a>
     <h2>Alyzande Renard MSc MBCS</h2>
-    <h3>Digital Capability & Learning Specialist | AI | Data | Inclusion</h3>
     <ul>
       <li><a href="#about">Professional Summary</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Selected Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Programming Languages & Tools</a></li>
       <li><a href="#certifications">Certifications & Development</a></li>
@@ -119,41 +136,20 @@
   </nav>
 
   <div class="container">
+    <header class="hero" id="top">
+      <h1>Alyzande Renard MSc MBCS</h1>
+      <h2>Digital Capability & Learning Specialist | AI | Data | Inclusion</h2>
+      <div class="subheading">Merseyside, UK · <a href="mailto:hello@example.com">hello [at] example.com</a></div>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/alyzande"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Alyzande"><i class="fab fa-github-alt"></i></a>
+        <a href="https://twitter.com/alyzande"><i class="fab fa-twitter"></i></a>
+      </div>
+    </header>
+
     <section id="about">
       <h2>Professional Summary</h2>
       <p>Alyzande is a Digital Learning Consultant who combines expertise in AI, data, and coaching to design inclusive, technology-enhanced learning. She mentors degree apprentices, delivers feedback aligned with university standards, and uses digital tools to support every learner’s success. Her recent projects apply machine learning and natural-language processing to educational and social-data contexts, showing a balance of human-centred design and technical curiosity.</p>
-    </section>
-
-    <hr>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <h3>2025 – Present · Digital Learning Consultant, QA Ltd (Remote)</h3>
-      <ul>
-        <li>Coach and mentor degree apprentices in Digital & Technology Solutions, guiding them to develop strong technical and professional competencies.</li>
-        <li>Conduct one-to-one reviews, assess portfolio evidence, and provide structured feedback aligned with apprenticeship KSBs and university standards.</li>
-        <li>Mark and assess academic assignments, including Software Engineering Fundamentals (Python), to Northumbria University criteria.</li>
-        <li>Support learner engagement and progression through adaptive coaching and empathetic communication. Enhanced DBS.</li>
-        <li>Contribute to QA’s Good Ofsted outcome and co-facilitate monthly Neurodiversity Champion sessions promoting inclusion and peer support.</li>
-      </ul>
-
-      <h3>2024 · Data Analyst Skills Coach, BPP University</h3>
-      <ul>
-        <li>Supported L3-4 Data Apprentices in analytics, Power BI, and data literacy.</li>
-        <li>Delivered reflective feedback linking theory to workplace application.</li>
-      </ul>
-
-      <h3>2023 · Software & Data Coach, Estio Training</h3>
-      <ul>
-        <li>Created interactive coding and data projects for online delivery.</li>
-        <li>Improved learner outcomes from failing to consistent pass/distinction.</li>
-      </ul>
-
-      <h3>2021 – 2023 · Coach & Learning Mentor, The Developer Academy</h3>
-      <ul>
-        <li>Delivered full-stack teaching (HTML, CSS, JavaScript, React, Node.js).</li>
-        <li>Delivered technical training and one-to-one coaching, supporting coding assignments, progress reviews, and career development including CV and interview preparation.</li>
-      </ul>
     </section>
 
     <hr>
@@ -168,6 +164,47 @@
         <li><strong>Warm & Safe (warmbanks.net)</strong> – HTML, CSS, JavaScript, OpenStreetMap API, Leaflet.js, Express, Node.js, Mongoose, MongoDB, JWT<br>Maps community “Warm Banks” – public locations offering warmth and support for those struggling to heat their homes. Built in agile team with full CRUD, accessible design for screen readers.</li>
         <li><strong>Smart Wardrobe</strong> – LAMP Stack (Linux, Apache, MySQL, PHP), AWS Rekognition<br>A computer-vision web app that recognises clothing items and suggests weather-appropriate outfits.<br><a href="https://github.com/Alyzande/SmartWardrobe">github.com/Alyzande/SmartWardrobe</a></li>
       </ul>
+    </section>
+
+    <hr>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="resume-item">
+        <h3>2025 – Present · Digital Learning Consultant, QA Ltd (Remote)</h3>
+        <ul>
+          <li>Coach and mentor degree apprentices in Digital & Technology Solutions, guiding them to develop strong technical and professional competencies.</li>
+          <li>Conduct one-to-one reviews, assess portfolio evidence, and provide structured feedback aligned with apprenticeship KSBs and university standards.</li>
+          <li>Mark and assess academic assignments, including Software Engineering Fundamentals (Python), to Northumbria University criteria.</li>
+          <li>Support learner engagement and progression through adaptive coaching and empathetic communication. Enhanced DBS.</li>
+          <li>Contribute to QA’s Good Ofsted outcome and co-facilitate monthly Neurodiversity Champion sessions promoting inclusion and peer support.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>2024 · Data Analyst Skills Coach, BPP University</h3>
+        <ul>
+          <li>Supported L3-4 Data Apprentices in analytics, Power BI, and data literacy.</li>
+          <li>Delivered reflective feedback linking theory to workplace application.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>2023 · Software & Data Coach, Estio Training</h3>
+        <ul>
+          <li>Created interactive coding and data projects for online delivery.</li>
+          <li>Improved learner outcomes from failing to consistent pass/distinction.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>2021 – 2023 · Coach & Learning Mentor, The Developer Academy</h3>
+        <ul>
+          <li>Delivered full-stack teaching (HTML, CSS, JavaScript, React, Node.js).</li>
+          <li>Delivered technical training and one-to-one coaching, supporting coding assignments, progress reviews, and career development including CV and interview preparation.</li>
+        </ul>
+      </div>
     </section>
 
     <hr>
