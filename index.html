@@ -16,6 +16,7 @@
       --cobblestone: #A89A8E; /* Neutral text */
       --rosetan: #D19C97; /* Accent */
       --gardenia: #F0E9E0; /* Background */
+      --viola: #B695C0; /* Pantone Viola */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,26 +81,28 @@
       text-align: left;
     }
     header.hero h1 {
-      font-size: 2.4rem;
-      color: var(--mocha);
+      font-size: 2.6rem;
+      color: var(--viola);
+      font-weight: 700;
     }
     header.hero h2 {
-      color: var(--rosetan);
-      font-size: 1.1rem;
+      color: var(--viola);
+      font-size: 1.2rem;
       margin-top: 0.5rem;
     }
     header.hero .subheading {
       color: var(--cobblestone);
       margin-top: 0.5rem;
       font-weight: 500;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      margin-right: .75rem;
+    .social-inline a {
+      margin-left: 0.5rem;
       color: var(--mocha);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     section { margin-bottom: 3rem; }
@@ -141,11 +144,12 @@
     <header class="hero" id="top">
       <h1>Alyzande Renard MSc MBCS</h1>
       <h2>Digital Capability & Learning Specialist | AI | Data | Inclusion</h2>
-      <div class="subheading">Merseyside, UK · <a href="mailto:hello@example.com">hello [at] example.com</a></div>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/alyzande"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/Alyzande"><i class="fab fa-github-alt"></i></a>
-        <a href="https://twitter.com/alyzande"><i class="fab fa-twitter"></i></a>
+      <div class="subheading">
+        Merseyside, UK · <a href="mailto:hello@example.com">hello [at] example.com</a>
+        <span class="social-inline">
+          <a href="https://linkedin.com/in/alyzande" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Alyzande" title="GitHub"><i class="fab fa-github-alt"></i></a>
+        </span>
       </div>
     </header>
 
