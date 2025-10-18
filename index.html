@@ -1,15 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alyzande – Official Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Alyzande Renard CV Resume">
+  <meta name="author" content="Alyzande">
+  <title>Alyzande Renard CV Resume</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #007bff;
+      --text: #333;
+      --muted: #666;
+      --bg: #fff;
+      --sidebar-bg: #0062cc;
+      --sidebar-text: #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Sidebar */
+    #sideNav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: var(--sidebar-bg);
+      color: var(--sidebar-text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    #sideNav img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 1rem 0;
+    }
+
+    #sideNav ul {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    #sideNav li { margin: .75rem 0; }
+
+    #sideNav a {
+      color: var(--sidebar-text);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    #sideNav a:hover { color: #e2e6ea; }
+
+    /* Main */
+    .container {
+      margin-left: 250px;
+      padding: 2rem 3rem;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3, h4 { font-weight: 600; color: var(--text); }
+    h1 span.text-primary { color: var(--primary); }
+
+    .subheading { color: var(--muted); margin-bottom: 1rem; }
+    .lead { font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+    .resume-item { margin-bottom: 2rem; }
+    .resume-item h3 { margin-bottom: .25rem; }
+    .resume-item p { margin-top: .25rem; }
+
+    .fa-ul { list-style: none; margin-left: 1.5em; }
+    .fa-ul li { margin-bottom: .5em; }
+    .fa-ul i { margin-right: .5em; color: var(--primary); }
+
+    .social-icons a {
+      margin-right: .75rem;
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
+
+    @media(max-width: 768px) {
+      #sideNav { position: relative; width: 100%; height: auto; flex-direction: row; justify-content: space-around; }
+      .container { margin: 0; padding: 1.5rem; }
+      #sideNav ul { display: flex; justify-content: center; flex-wrap: wrap; }
+    }
+  </style>
 </head>
-<body>
-  <main style="max-width:700px;margin:auto;font-family:sans-serif;padding:2rem;">
-    <h1>Hello, I’m Alyzande 👋</h1>
-    <p>This is my personal space while I rebuild my online presence.</p>
-    <p>Thank you for visiting!</p>
-  </main>
+
+<body id="page-top">
+  <nav id="sideNav">
+    <a href="#about">
+      <img src="img/profile.jpg" alt="Alyzande Renard">
+    </a>
+    <h2>Alyzande <span class="text-primary">Renard</span></h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#memberships">Memberships</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h1 class="mb-0">Alyzande <span class="text-primary">Renard</span></h1>
+      <div class="subheading mb-3">Sheffield, UK · <a href="mailto:hello@example.com">hello [at] example.com</a></div>
+      <p class="lead">A computing Master’s degree graduate with LAMP stack skills and training experience. Imaginative, reliable, pragmatic, efficient, and hard-working. After teaching software bootcamp remotely, I’m searching for a full stack web development position using C# .NET, JavaScript, or MySQL. Machine learning and accessibility enthusiast.</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/alyzande"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Alyzande"><i class="fab fa-github-alt"></i></a>
+        <a href="https://twitter.com/alyzande"><i class="fab fa-twitter"></i></a>
+        <a href="https://shu.ac.uk"><i class="fas fa-user-graduate"></i></a>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="resume-item">
+        <h3>MSc Computing</h3>
+        <p>Sheffield Hallam University — 2021</p>
+        <p>Dissertation in Machine Learning with AWS S3 and Rekognition. C# .NET in Visual Studio, Debian Linux, Apache, MySQL, PHP. University Prize for Industrial Expertise.</p>
+      </div>
+      <div class="resume-item">
+        <h3>BA (Hons) Business and Management</h3>
+        <p>Oxford Brookes University — 1998</p>
+        <p>Double Dissertation: HRM Practices in IT and Web Design companies. Law, Marketing, Accounting, HRM, French & German.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Project Management</h3>
+        <p>International Webmasters Association — 2013</p>
+        <p>35 hours towards PMI certification: planning, scheduling, budgeting, cost control, performance measurement.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Managing Web Design Projects</h3>
+        <p>International Webmasters Association — 2005</p>
+        <p>Industry-standard web project management process used by Macromedia.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Client-Side of Application Development</h3>
+        <p>Open University — 2005</p>
+        <p>JavaScript, DHTML, validation, DOM manipulation, cookies, scalability.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Web Basics: Design, Development and Management</h3>
+        <p>Open University — 2004</p>
+        <p>HTML, XHTML, CSS, design practices to W3C standards, usability, and accessibility.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="resume-item">
+        <h3>Junior Instructor</h3>
+        <p class="subheading">The Developer Academy, Sheffield — 2021–Present</p>
+        <p>Remote teaching full stack web development to career changers. Training in HTML, CSS, Flexbox, Bootstrap, JavaScript, Bash, Git, and debugging. Group presentations and 1:1 student support.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Business Owner</h3>
+        <p class="subheading">The Gold Queen, Cambridge — 2010–Present</p>
+        <p>Founded the leading website in a video gaming niche. Research, data analysis, UX redesign, 600+ articles, marketing via Twitter and Twitch (Affiliate Partner). Managed writers, researchers, and streamers.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Web Development Manager</h3>
+        <p class="subheading">Purple Nine, Surrey — 2000–2001</p>
+        <p>Expanded company direction to include SEO and web marketing. Managed development and client presentations.</p>
+      </div>
+      <div class="resume-item">
+        <h3>Web Designer → Development Manager</h3>
+        <p class="subheading">Pro-Site, Surrey — 1999–2000</p>
+        <p>Technical lead, trainer, and project coordinator for 50+ small business websites. Delivered consistent quality and met targets.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="subheading"><i class="fas fa-desktop"></i> Programming Languages & Tools</div>
+      <ul class="fa-ul">
+        <li><i class="fas fa-check-circle"></i>HTML, CSS, JavaScript ES6, Flexbox, Bootstrap, accessibility (W3C).</li>
+        <li><i class="fas fa-check-circle"></i>C# .NET in Visual Studio, MVC, Entity Framework.</li>
+        <li><i class="fas fa-check-circle"></i>Debian sysadmin, Apache, Git, Bash.</li>
+        <li><i class="fas fa-check-circle"></i>MySQL, PHP.</li>
+        <li><i class="fas fa-check-circle"></i>WordPress: installation, plugins, themes.</li>
+        <li><i class="fas fa-check-circle"></i>Photoshop, Sony Vegas, VS Code.</li>
+        <li><i class="fas fa-check-circle"></i>SEO by hand, proprietary reporting tools.</li>
+        <li><i class="fas fa-check-circle"></i>E-commerce integration (Clickbank, EJunkie, Amazon Affiliate).</li>
+      </ul>
+
+      <div class="subheading"><i class="fas fa-chart-line"></i> Project Management</div>
+      <ul class="fa-ul">
+        <li><i class="fas fa-check-circle"></i>Degree in Business and Management.</li>
+        <li><i class="fas fa-check-circle"></i>Qualified in Managing Web Design Projects.</li>
+        <li><i class="fas fa-check-circle"></i>Experienced web development team leader.</li>
+      </ul>
+
+      <div class="subheading"><i class="fas fa-briefcase"></i> Business</div>
+      <ul class="fa-ul">
+        <li><i class="fas fa-check-circle"></i>Social Media & Email Marketing (Twitter, Facebook, YouTube, Twitch, Aweber).</li>
+        <li><i class="fas fa-check-circle"></i>Writing and editing: 600+ articles, published nonfiction book.</li>
+        <li><i class="fas fa-check-circle"></i>Customer liaison, presentations, and communication skills (French & German).</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul class="fa-ul">
+        <li><i class="fas fa-universal-access"></i>Disability and Accessibility</li>
+        <li><i class="fas fa-hand-holding-usd"></i>Virtual Currency</li>
+        <li><i class="fas fa-praying-hands"></i>Spirituality</li>
+        <li><i class="fas fa-user-secret"></i>Information Security and Privacy</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="memberships">
+      <h2>Memberships</h2>
+      <ul class="fa-ul">
+        <li><i class="fas fa-award"></i>Project Management Institute</li>
+        <li><i class="fas fa-award"></i>Sheffield Digital</li>
+        <li><i class="fas fa-award"></i>Women in Voice</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p style="color:#777; font-size:0.9rem; margin-top:3rem;">© Alyzande Renard · Last updated October 2025</p>
+    </footer>
+  </div>
 </body>
 </html>
