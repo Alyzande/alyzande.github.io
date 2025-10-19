@@ -15,7 +15,7 @@
       --mocha: #A47764;
       --rosetan: #D19C97;
       --gardenia: #F7F3EE;
-      --viola: #6E5188; /* slightly darker than base viola for stronger contrast */
+      --viola: #6E5188;
       --cobblestone: #A89A8E;
     }
 
@@ -51,6 +51,7 @@
       border-radius: 0.5rem;
       font-weight: 500;
       transition: all 0.3s ease;
+      padding: 0.5rem 1.25rem;
     }
     .btn-alyzande:hover {
       background-color: var(--mocha);
@@ -82,6 +83,14 @@
       font-size: 0.9rem;
       color: var(--cobblestone);
       margin-top: 3rem;
+    }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -124,15 +133,17 @@
       It highlights the role of <strong>data-driven intelligence</strong> and <strong>machine learning-enhanced OSINT</strong> in supporting maritime resilience, national security, and situational awareness.</p>
 
       <h2>Links</h2>
-      <p>
+      <div class="footer-buttons">
         <a href="https://github.com/Alyzande/shadow-fleet-tracker" class="btn btn-alyzande">
           <i class="fab fa-github"></i> View GitHub Repository
         </a>
-      </p>
+        <a href="index.html" class="btn btn-alyzande">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
     </div>
 
     <footer>
-      <p><a href="index.html">← Back to Portfolio</a></p>
       <p>© 2025 Alyzande Renard MSc MBCS</p>
     </footer>
   </div>
