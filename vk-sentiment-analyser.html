@@ -1,1 +1,137 @@
-vk-sentiment-analyser.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VKontakte Sentiment Analyser — real-time NLP tool monitoring Russian news agency posts for sentiment trends. Project by Alyzande Renard MSc MBCS.">
+  <meta name="author" content="Alyzande Renard">
+  <title>VKontakte Sentiment Analyser | Alyzande Renard MSc MBCS</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --mocha: #A47764;
+      --rosetan: #D19C97;
+      --gardenia: #F7F3EE;
+      --viola: #6E5188;
+      --cobblestone: #A89A8E;
+    }
+
+    body {
+      background-color: var(--gardenia);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--cobblestone);
+      padding: 2rem;
+    }
+
+    h1 {
+      color: var(--viola);
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+
+    h2, h3 {
+      color: var(--mocha);
+      font-weight: 700;
+    }
+
+    .subheading {
+      color: var(--rosetan);
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+      font-weight: 600;
+    }
+
+    .btn-alyzande {
+      border: 1px solid var(--rosetan);
+      color: #fff;
+      background-color: var(--rosetan);
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1.25rem;
+    }
+    .btn-alyzande:hover {
+      background-color: var(--mocha);
+      border-color: var(--mocha);
+      color: #fff;
+    }
+
+    a.coloured-link {
+      color: var(--rosetan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.coloured-link:hover {
+      color: var(--mocha);
+      text-decoration: underline;
+    }
+
+    .project-header { text-align: center; margin-bottom: 2rem; }
+    .project-image {
+      width: 100%; max-width: 700px; margin: 1rem auto;
+      display: block; border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .project-content { max-width: 800px; margin: 0 auto; }
+    footer { text-align: center; font-size: 0.9rem; color: var(--cobblestone); margin-top: 3rem; }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="project-header">
+      <h1>VKontakte Sentiment Analyser</h1>
+      <div class="subheading">Live VKontakte Media Monitoring Using NLP and Sentiment Analysis of Russian News Agency Posts</div>
+      <p><strong>Year:</strong> 2025</p>
+      <p><strong>Technologies:</strong> Python, Flask, Hugging Face Transformers, VK API, JavaScript, Bootstrap 5</p>
+    </div>
+
+    <img src="img/vk-sentiment-placeholder.jpg" alt="VKontakte Sentiment Analyser Screenshot" class="project-image">
+
+    <div class="project-content">
+      <h2>Overview</h2>
+      <p>The <strong>VKontakte Sentiment Analyser</strong> builds on the Russian Sentiment Analysis Bot by applying natural language processing to live Russian social media posts. It connects to the VKontakte API to gather recent headlines from Russian news agencies and analyses sentiment using the <strong>RuBERT model</strong> from Hugging Face. The system provides real-time insights into how narratives surrounding the Ukraine conflict are being presented inside Russia.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Connects directly to the <strong>VKontakte API</strong> to fetch live news posts from verified Russian media outlets.</li>
+        <li>Uses <strong>RuBERT (rubert-ru-sentiment-rusentiment)</strong> for accurate Russian-language sentiment classification.</li>
+        <li>Implements automated topic filters to focus on key Ukraine-related keywords and phrases.</li>
+        <li>Displays aggregated results in an interactive front end, showing polarity trends over time.</li>
+        <li>Supports export of structured JSON data for deeper analysis and cross-referencing with other OSINT sources.</li>
+      </ul>
+
+      <h2>Technical Details</h2>
+      <p>The backend, written in <strong>Python (Flask)</strong>, manages API requests and model inference through <strong>Hugging Face Transformers</strong>. Data from VKontakte is filtered and processed in real time. The frontend, built in <strong>Bootstrap 5</strong> and <strong>JavaScript</strong>, visualises the sentiment distribution and allows for keyword-based exploration. This modular structure supports expansion to include Telegram or Twitter APIs.</p>
+
+      <h2>Rationale & Purpose</h2>
+      <p>This project demonstrates how social media monitoring can support <strong>open-source intelligence</strong> by tracking sentiment shifts in Russian-language platforms. It was designed to examine the tone and framing of news agency narratives about the <strong>Ukraine conflict</strong> as shared inside Russia. The system illustrates how real-time language data and <strong>machine learning</strong> can be combined to support early warning and influence analysis.</p>
+
+      <h2>Links</h2>
+      <div class="footer-buttons">
+        <a href="https://github.com/Alyzande/vk_sentiment_bot" class="btn btn-alyzande">
+          <i class="fab fa-github"></i> View GitHub Repository
+        </a>
+        <a href="index.html" class="btn btn-alyzande">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Alyzande Renard MSc MBCS</p>
+    </footer>
+  </div>
+</body>
+</html>
