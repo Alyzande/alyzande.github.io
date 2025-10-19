@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Russian Sentiment Analysis Bot — real-time NLP tool using RuBERT for sentiment analysis of Russian-language text and news. Project by Alyzande Renard MSc MBCS.">
+  <meta name="description" content="Russian Sentiment Analysis Bot, real-time NLP tool using RuBERT for sentiment analysis of Russian-language text and news. Project by Alyzande Renard MSc MBCS.">
   <meta name="author" content="Alyzande Renard">
   <title>Russian Sentiment Analysis Bot | Alyzande Renard MSc MBCS</title>
 
@@ -59,6 +59,16 @@
       color: #fff;
     }
 
+    a.coloured-link {
+      color: var(--rosetan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.coloured-link:hover {
+      color: var(--mocha);
+      text-decoration: underline;
+    }
+
     .project-header { text-align: center; margin-bottom: 2rem; }
     .project-image {
       width: 100%; max-width: 700px; margin: 1rem auto;
@@ -91,22 +101,22 @@
 
     <div class="project-content">
       <h2>Overview</h2>
-      <p>The <strong>Russian Sentiment Analysis Bot</strong> is a full-stack Flask web application that analyses sentiment in Russian-language text using artificial intelligence. It combines user-inputted text analysis with live Russian news sentiment scoring, using <strong>Hugging Face’s RuBERT model</strong> (<a href="https://huggingface.co/sismetanin/rubert-ru-sentiment-rusentiment" target="_blank">sismetanin/rubert-ru-sentiment-rusentiment</a>).</p>
+      <p>The <strong>Russian Sentiment Analysis Bot</strong> is a full-stack Flask web application that analyses sentiment in Russian-language text using artificial intelligence. It combines user-inputted text analysis with live Russian news sentiment scoring, using <strong>Hugging Face’s RuBERT model</strong> (<a class="coloured-link" href="https://huggingface.co/sismetanin/rubert-ru-sentiment-rusentiment" target="_blank">sismetanin/rubert-ru-sentiment-rusentiment</a>).</p>
 
       <h2>Key Features</h2>
       <ul>
-        <li>🤖 AI-powered sentiment classification — positive, neutral, or negative.</li>
-        <li>📰 Real-time Russian news headline analysis via <strong>NewsAPI</strong>.</li>
-        <li>🎨 Russian flag–themed Bootstrap interface with live loading indicators and colour-coded results.</li>
-        <li>⚡ Instant feedback using asynchronous JavaScript for dynamic page updates.</li>
-        <li>🌐 Deployable full-stack Flask + Bootstrap web app, easy to adapt for other languages or data sources.</li>
+        <li>AI-powered sentiment classification for positive, neutral, or negative text.</li>
+        <li>Real-time Russian news headline analysis using <strong>NewsAPI</strong>.</li>
+        <li>Russian flag–themed Bootstrap interface with live loading indicators and colour-coded results.</li>
+        <li>Instant feedback with asynchronous JavaScript updates.</li>
+        <li>Deployable full-stack Flask and Bootstrap application, easily adaptable for other languages or data sources.</li>
       </ul>
 
       <h2>Technical Details</h2>
-      <p>The backend is written in <strong>Python (Flask)</strong>, with a RESTful API that connects to the <strong>RuBERT sentiment model</strong> hosted on Hugging Face for text inference. The frontend uses <strong>Bootstrap 5</strong> and <strong>JavaScript</strong> for an interactive experience, with colour-coded visual feedback and live news integration via <strong>NewsAPI</strong>. Results are returned as structured JSON with polarity and confidence scores.</p>
+      <p>The backend is written in <strong>Python (Flask)</strong>, with a RESTful API that connects to the <strong>RuBERT sentiment model</strong> hosted on Hugging Face for text inference. The frontend uses <strong>Bootstrap 5</strong> and <strong>JavaScript</strong> for an interactive experience, with colour-coded feedback and live news integration via <strong>NewsAPI</strong>. Results are returned as structured JSON with polarity and confidence scores.</p>
 
       <h2>Rationale & Purpose</h2>
-      <p>This project was designed to demonstrate <strong>applied NLP for OSINT and sentiment analysis</strong> in foreign-language contexts. It supports understanding of Russian-language media tone, public sentiment, and disinformation narratives — areas of increasing importance for <strong>language-enabled intelligence analysis</strong> and data-driven policy insight.</p>
+      <p>This project demonstrates how <strong>multilingual NLP</strong> and <strong>machine learning</strong> can be applied in <strong>open-source intelligence</strong> to assess sentiment in foreign-language media environments. It was developed as part of an exploration into <strong>Russian-language data analysis</strong> and media monitoring relevant to UK intelligence and defence applications.</p>
 
       <h2>Links</h2>
       <div class="footer-buttons">
