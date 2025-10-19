@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shadow Fleet Tracker — Maritime Intelligence Platform by Alyzande Renard MSc MBCS.">
+  <meta name="description" content="Predictive OSINT platform using AIS metadata to track Russian 'shadow fleet' vessels near undersea cables. Project by Alyzande Renard MSc MBCS.">
   <meta name="author" content="Alyzande Renard">
   <title>Shadow Fleet Tracker | Alyzande Renard MSc MBCS</title>
 
@@ -15,7 +15,7 @@
       --mocha: #A47764;
       --rosetan: #D19C97;
       --gardenia: #F7F3EE;
-      --viola: #8C6FA6;
+      --viola: #6E5188; /* slightly darker than base viola for stronger contrast */
       --cobblestone: #A89A8E;
     }
 
@@ -26,7 +26,23 @@
       padding: 2rem;
     }
 
-    h1, h2, h3 { color: var(--mocha); font-weight: 700; }
+    h1 {
+      color: var(--viola);
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+
+    h2, h3 {
+      color: var(--mocha);
+      font-weight: 700;
+    }
+
+    .subheading {
+      color: var(--rosetan);
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+      font-weight: 600;
+    }
 
     .btn-alyzande {
       border: 1px solid var(--rosetan);
@@ -42,14 +58,31 @@
       color: #fff;
     }
 
-    .project-header { text-align: center; margin-bottom: 2rem; }
+    .project-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
     .project-image {
-      width: 100%; max-width: 700px; margin: 1rem auto;
-      display: block; border-radius: 1rem;
+      width: 100%;
+      max-width: 700px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 1rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .project-content { max-width: 800px; margin: 0 auto; }
-    footer { text-align: center; font-size: 0.9rem; color: var(--cobblestone); margin-top: 3rem; }
+
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--cobblestone);
+      margin-top: 3rem;
+    }
   </style>
 </head>
 
@@ -57,6 +90,7 @@
   <div class="container">
     <div class="project-header">
       <h1>Shadow Fleet Tracker — Maritime Intelligence Platform</h1>
+      <div class="subheading">Predictive OSINT Platform: Mapping the Hidden Russian ‘Shadow Fleet’</div>
       <p><strong>Year:</strong> 2025</p>
       <p><strong>Technologies:</strong> Python, Flask/FastAPI, GeoPandas, Leaflet.js, JavaScript, WebSockets, AISStream.io, TeleGeography GeoJSON</p>
     </div>
@@ -65,12 +99,42 @@
 
     <div class="project-content">
       <h2>Overview</h2>
-      <p>The Shadow Fleet Tracker is a real-time maritime intelligence platform that detects and visualises suspicious vessel activity worldwide using AIS (Automatic Identification System) data. It identifies vessels operating under flags of convenience or loitering near critical undersea infrastructure such as submarine cables.</p>
+      <p>The Shadow Fleet Tracker is a real-time maritime intelligence platform that detects and visualises suspicious vessel activity worldwide using AIS (Automatic Identification System) metadata. It identifies vessels operating under flags of convenience or loitering near critical undersea infrastructure such as submarine cables, contributing to open-source maritime situational awareness.</p>
 
       <h2>Key Features</h2>
       <ul>
-        <li>Real-time AIS data ingestion and anomaly detection.</li>
-        <li>Geofencing alerts for proximity to high-value maritime zones.</li>
-        <li>Interactive Leaflet.js dashboard with live vessel tracking.</li>
-        <li>Integration-ready architecture for satellite and sanctions datasets.</li>
+        <li>Real-time AIS data ingestion and anomaly detection for covert activity patterns.</li>
+        <li>Geofencing alerts for proximity to critical maritime zones and infrastructure.</li>
+        <li>Interactive Leaflet.js dashboard with live vessel tracking and classification filters.</li>
+        <li>Integration-ready architecture for satellite and sanctions datasets to extend OSINT coverage.</li>
       </ul>
+
+      <h2>Technical Details</h2>
+      <p>The backend is built with <strong>Python</strong> using <strong>Flask/FastAPI</strong> and <strong>GeoPandas</strong> for spatial analysis. 
+      Real-time AIS streams are handled via <strong>WebSockets</strong> and visualised through <strong>Leaflet.js</strong>. 
+      Data layers incorporate TeleGeography’s undersea cable GeoJSON datasets and public vessel registries. 
+      Its modular structure supports future AI-based anomaly detection and satellite imagery fusion.</p>
+
+      <h2>Collaboration & Methodology</h2>
+      <p>This project was coded collaboratively. I was responsible for the <strong>system architecture, backend design, and structural front-end</strong>, while <strong>Bradley Ashton</strong> developed advanced UI and data visualisation features. 
+      We worked via <strong>Discord</strong> and <strong>Slack</strong>, using a <strong>tight SDLC</strong> with a <strong>loose iterative methodology</strong> to allow rapid testing and refinement during development.</p>
+
+      <h2>Rationale & Purpose</h2>
+      <p>This platform explores how <strong>open-source maritime metadata</strong> can be used to identify covert Russian “shadow fleet” activity and monitor potential threats to <strong>UK undersea infrastructure</strong>. 
+      It highlights the role of <strong>data-driven intelligence</strong> and <strong>machine learning-enhanced OSINT</strong> in supporting maritime resilience, national security, and situational awareness.</p>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/Alyzande/shadow-fleet-tracker" class="btn btn-alyzande">
+          <i class="fab fa-github"></i> View GitHub Repository
+        </a>
+      </p>
+    </div>
+
+    <footer>
+      <p><a href="index.html">← Back to Portfolio</a></p>
+      <p>© 2025 Alyzande Renard MSc MBCS</p>
+    </footer>
+  </div>
+</body>
+</html>
