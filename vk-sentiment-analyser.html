@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="VKontakte Sentiment Analyser — real-time NLP tool monitoring Russian news agency posts for sentiment trends. Project by Alyzande Renard MSc MBCS.">
+  <meta name="description" content="VKontakte Sentiment Analyser — real-time NLP system monitoring Russian news agency posts for sentiment trends. Project by Alyzande Renard MSc MBCS.">
   <meta name="author" content="Alyzande Renard">
   <title>VKontakte Sentiment Analyser | Alyzande Renard MSc MBCS</title>
 
@@ -12,79 +12,39 @@
 
   <style>
     :root {
-      --mocha: #A47764;
-      --rosetan: #D19C97;
-      --gardenia: #F7F3EE;
-      --viola: #6E5188;
-      --cobblestone: #A89A8E;
+      --mocha:#A47764;
+      --rosetan:#D19C97;
+      --gardenia:#F7F3EE;
+      --viola:#6E5188;
+      --cobblestone:#A89A8E;
     }
-
     body {
-      background-color: var(--gardenia);
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: var(--cobblestone);
-      padding: 2rem;
+      background-color:var(--gardenia);
+      font-family:'Helvetica Neue',Arial,sans-serif;
+      color:var(--cobblestone);
+      padding:2rem;
     }
-
-    h1 {
-      color: var(--viola);
-      font-weight: 800;
-      font-size: 2.2rem;
+    h1{color:var(--viola);font-weight:800;font-size:2.2rem;}
+    h2,h3{color:var(--mocha);font-weight:700;}
+    .subheading{color:var(--rosetan);font-size:1.2rem;margin-top:0.3rem;font-weight:600;}
+    .btn-alyzande{
+      border:1px solid var(--rosetan);
+      color:#fff;background-color:var(--rosetan);
+      border-radius:0.5rem;font-weight:500;
+      transition:all 0.3s ease;padding:0.5rem 1.25rem;
     }
-
-    h2, h3 {
-      color: var(--mocha);
-      font-weight: 700;
+    .btn-alyzande:hover{background-color:var(--mocha);border-color:var(--mocha);color:#fff;}
+    a.coloured-link{color:var(--rosetan);text-decoration:none;font-weight:600;}
+    a.coloured-link:hover{color:var(--mocha);text-decoration:underline;}
+    .project-header{text-align:center;margin-bottom:2rem;}
+    .project-image{
+      width:100%;max-width:700px;margin:1rem auto;
+      display:block;border-radius:1rem;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
     }
-
-    .subheading {
-      color: var(--rosetan);
-      font-size: 1.2rem;
-      margin-top: 0.3rem;
-      font-weight: 600;
-    }
-
-    .btn-alyzande {
-      border: 1px solid var(--rosetan);
-      color: #fff;
-      background-color: var(--rosetan);
-      border-radius: 0.5rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      padding: 0.5rem 1.25rem;
-    }
-    .btn-alyzande:hover {
-      background-color: var(--mocha);
-      border-color: var(--mocha);
-      color: #fff;
-    }
-
-    a.coloured-link {
-      color: var(--rosetan);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a.coloured-link:hover {
-      color: var(--mocha);
-      text-decoration: underline;
-    }
-
-    .project-header { text-align: center; margin-bottom: 2rem; }
-    .project-image {
-      width: 100%; max-width: 700px; margin: 1rem auto;
-      display: block; border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .project-content { max-width: 800px; margin: 0 auto; }
-    footer { text-align: center; font-size: 0.9rem; color: var(--cobblestone); margin-top: 3rem; }
-
-    .footer-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
+    .project-content{max-width:800px;margin:0 auto;}
+    footer{text-align:center;font-size:0.9rem;color:var(--cobblestone);margin-top:3rem;}
+    .footer-buttons{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
   </style>
 </head>
 
@@ -101,22 +61,22 @@
 
     <div class="project-content">
       <h2>Overview</h2>
-      <p>The <strong>VKontakte Sentiment Analyser</strong> builds on the Russian Sentiment Analysis Bot by applying natural language processing to live Russian social media posts. It connects to the VKontakte API to gather recent headlines from Russian news agencies and analyses sentiment using the <strong>RuBERT model</strong> from Hugging Face. The system provides real-time insights into how narratives surrounding the Ukraine conflict are being presented inside Russia.</p>
+      <p>The <strong>VKontakte Sentiment Analyser</strong> applies real-time natural-language processing to public posts from Russian news agencies on VKontakte.  It tracks how official narratives around the Ukraine conflict are framed within Russian social media.  The application fetches posts via the <strong>VK API</strong>, filters them for relevant war-related keywords, and analyses sentiment using the <strong>RuBERT model</strong> (<a class="coloured-link" href="https://huggingface.co/sismetanin/rubert-ru-sentiment-rusentiment" target="_blank">sismetanin/rubert-ru-sentiment-rusentiment</a>).</p>
 
       <h2>Key Features</h2>
       <ul>
-        <li>Connects directly to the <strong>VKontakte API</strong> to fetch live news posts from verified Russian media outlets.</li>
-        <li>Uses <strong>RuBERT (rubert-ru-sentiment-rusentiment)</strong> for accurate Russian-language sentiment classification.</li>
-        <li>Implements automated topic filters to focus on key Ukraine-related keywords and phrases.</li>
-        <li>Displays aggregated results in an interactive front end, showing polarity trends over time.</li>
-        <li>Supports export of structured JSON data for deeper analysis and cross-referencing with other OSINT sources.</li>
+        <li>Fetches recent posts from major Russian outlets such as <strong>TASS</strong>, <strong>Kommersant</strong>, and <strong>RT</strong> using the VK API.</li>
+        <li>Filters posts for specific user-defined keywords connected to the Ukraine conflict.</li>
+        <li>Splits text into individual clauses for fragment-level sentiment scoring to capture nuance.</li>
+        <li>Aggregates fragment scores into overall post sentiment, displayed with clear colour-coded categories: blue (positive), grey (neutral), red (negative).</li>
+        <li>Allows users to expand any post to view fragment-level reasoning behind each sentiment label.</li>
       </ul>
 
       <h2>Technical Details</h2>
-      <p>The backend, written in <strong>Python (Flask)</strong>, manages API requests and model inference through <strong>Hugging Face Transformers</strong>. Data from VKontakte is filtered and processed in real time. The frontend, built in <strong>Bootstrap 5</strong> and <strong>JavaScript</strong>, visualises the sentiment distribution and allows for keyword-based exploration. This modular structure supports expansion to include Telegram or Twitter APIs.</p>
+      <p>The backend, built with <strong>Python (Flask)</strong>, manages VK API requests, text preprocessing, and inference via the <strong>Hugging Face Transformers</strong> library.  Posts are cleaned, split by punctuation, and processed through the RuBERT model for polarity prediction.  Results are aggregated numerically and returned to the <strong>Bootstrap 5 / JavaScript</strong> front end for visualisation.  The design supports authenticated access tokens stored securely via <strong>python-dotenv</strong>, and can easily extend to additional platforms such as Telegram or Twitter.</p>
 
-      <h2>Rationale & Purpose</h2>
-      <p>This project demonstrates how social media monitoring can support <strong>open-source intelligence</strong> by tracking sentiment shifts in Russian-language platforms. It was designed to examine the tone and framing of news agency narratives about the <strong>Ukraine conflict</strong> as shared inside Russia. The system illustrates how real-time language data and <strong>machine learning</strong> can be combined to support early warning and influence analysis.</p>
+      <h2>Rationale &amp; Purpose</h2>
+      <p>This project explores how social-media data can enhance <strong>open-source intelligence</strong> and sentiment mapping within restricted information environments.  By monitoring Russian state-affiliated outlets in near real time, the system offers insight into tone shifts, propaganda trends, and audience sentiment surrounding the <strong>Ukraine conflict</strong>.  It demonstrates the integration of <strong>language proficiency</strong>, <strong>machine learning</strong>, and <strong>data ethics</strong> in a single operational tool.</p>
 
       <h2>Links</h2>
       <div class="footer-buttons">
