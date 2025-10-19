@@ -20,13 +20,24 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--gardenia); color: var(--cobblestone); }
-    a { color: var(--mocha); text-decoration: none; } a:hover { text-decoration: underline; }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--gardenia);
+      color: var(--cobblestone);
+    }
+    a { color: var(--mocha); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    #sideNav { position: fixed; top: 0; left: 0; width: 250px; height: 100%; background-color: var(--mocha); color: #fff;
-      display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+    #sideNav {
+      position: fixed; top: 0; left: 0; width: 250px; height: 100%;
+      background-color: var(--mocha); color: #fff;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 1rem;
+    }
     #sideNav ul { list-style: none; padding: 0; margin-top: 1rem; width: 100%; text-align: center; }
-    #sideNav li { margin: .75rem 0; } #sideNav a { color: #fff; font-weight: 500; } #sideNav a:hover { color: var(--gardenia); }
+    #sideNav li { margin: .75rem 0; }
+    #sideNav a { color: #fff; font-weight: 500; }
+    #sideNav a:hover { color: var(--gardenia); }
 
     .container { margin-left: 250px; padding: 2rem 3rem; max-width: 900px; }
     header.hero { margin-bottom: 3rem; }
@@ -40,13 +51,33 @@
     ul { margin-left: 1.5rem; } li { margin: 0.3rem 0; }
     hr { border: none; border-top: 1px solid var(--rosetan); margin: 2rem 0; }
 
-    .project-card { background: var(--gardenia); border: 1px solid var(--rosetan); border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 2rem; transition: transform 0.2s ease; }
-    .project-card:hover { transform: translateY(-3px); }
+    .project-card {
+      background: var(--gardenia);
+      border: 1px solid var(--rosetan);
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
     .card-title { color: var(--mocha); font-weight: 600; }
-    .btn-alyzande { border: 1px solid var(--rosetan); color: #fff; background-color: var(--rosetan);
-      border-radius: 0.5rem; font-weight: 500; transition: all 0.3s ease; }
-    .btn-alyzande:hover { background-color: var(--mocha); border-color: var(--mocha); }
+    .card-text { color: var(--mocha); }
+
+    .btn-alyzande {
+      border: 1px solid var(--rosetan);
+      color: #fff;
+      background-color: var(--rosetan);
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn-alyzande:hover {
+      background-color: var(--mocha);
+      border-color: var(--mocha);
+      color: #fff;
+    }
 
     @media(max-width: 768px) {
       #sideNav { position: relative; width: 100%; height: auto; flex-direction: row; justify-content: space-around; }
@@ -65,6 +96,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#languages">Languages</a></li>
       <li><a href="#certifications">Certifications</a></li>
     </ul>
   </nav>
@@ -94,57 +126,57 @@
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">Shadow Fleet Tracker — Maritime Intelligence Platform (2025)</h3>
-        <p>A real-time maritime intelligence system detecting and visualising suspicious vessel activity using global AIS data. Combines Python geospatial analysis with Leaflet.js dashboards for maritime monitoring near critical undersea infrastructure.</p>
-        <p><strong>Key features:</strong> Real-time AIS ingestion and anomaly detection, geofencing alerts, live vessel tracking, modular satellite and sanctions data integration.</p>
-        <p><strong>Technologies:</strong> Python, Flask/FastAPI, GeoPandas, Leaflet.js, JavaScript, AISStream.io, TeleGeography GeoJSON.</p>
+        <p class="card-text">A real-time maritime intelligence system detecting and visualising suspicious vessel activity using global AIS data. Combines Python geospatial analysis with Leaflet.js dashboards for maritime monitoring near critical undersea infrastructure.</p>
+        <p class="card-text"><strong>Key features:</strong> Real-time AIS ingestion and anomaly detection, geofencing alerts, live vessel tracking, modular satellite and sanctions data integration.</p>
+        <p class="card-text"><strong>Technologies:</strong> Python, Flask/FastAPI, GeoPandas, Leaflet.js, JavaScript, AISStream.io, TeleGeography GeoJSON.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">Russian Sentiment Analysis Bot (2025)</h3>
-        <p>Analyses sentiment in Russian text using Hugging Face’s RuBERT models, offering both custom text input and live analysis of current Russian news headlines. Demonstrates multilingual NLP and Flask-based web integration for open-source intelligence.</p>
-        <p><strong>Key features:</strong> Dual-mode input (manual and automated), sentiment analysis, Hugging Face integration, multilingual text handling.</p>
-        <p><strong>Technologies:</strong> Python, Flask, Hugging Face, JavaScript, HTML, CSS.</p>
+        <p class="card-text">Analyses sentiment in Russian text using Hugging Face’s RuBERT models, offering both custom text input and live analysis of current Russian news headlines. Demonstrates multilingual NLP and Flask-based web integration for open-source intelligence.</p>
+        <p class="card-text"><strong>Key features:</strong> Dual-mode input (manual and automated), sentiment analysis, Hugging Face integration, multilingual text handling.</p>
+        <p class="card-text"><strong>Technologies:</strong> Python, Flask, Hugging Face, JavaScript, HTML, CSS.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">vKontakte News Sentiment Analyser (2025)</h3>
-        <p>Extends the Russian sentiment bot to VK (VKontakte) by analysing domestic news-agency headlines related to the Ukraine conflict. Aggregates sentiment to measure public tone within Russian media environments.</p>
-        <p><strong>Key features:</strong> API integration with VK, headline sentiment aggregation, multilingual data collection, comparative analytics.</p>
-        <p><strong>Technologies:</strong> Python, Hugging Face, JavaScript, VK API.</p>
+        <p class="card-text">Extends the Russian sentiment bot to VK (VKontakte) by analysing domestic news-agency headlines related to the Ukraine conflict. Aggregates sentiment to measure public tone within Russian media environments.</p>
+        <p class="card-text"><strong>Key features:</strong> API integration with VK, headline sentiment aggregation, multilingual data collection, comparative analytics.</p>
+        <p class="card-text"><strong>Technologies:</strong> Python, Hugging Face, JavaScript, VK API.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">EuroPulse (2025 – Present)</h3>
-        <p>A multilingual OSINT system monitoring Reddit, Mastodon, and Bluesky for early reports from independent journalists before traditional news outlets confirm them. Identifies emerging emergencies and threats across Europe in French and German.</p>
-        <p><strong>Key features:</strong> API aggregation, multilingual NLP, event detection, geospatial alerting for public-safety intelligence.</p>
-        <p><strong>Technologies:</strong> Python, JavaScript, CSS, Reddit API, Mastodon API, Bluesky API.</p>
+        <p class="card-text">A multilingual OSINT system monitoring Reddit, Mastodon, and Bluesky for early reports from independent journalists before traditional news outlets confirm them. Identifies emerging emergencies and threats across Europe in French and German.</p>
+        <p class="card-text"><strong>Key features:</strong> API aggregation, multilingual NLP, event detection, geospatial alerting for public-safety intelligence.</p>
+        <p class="card-text"><strong>Technologies:</strong> Python, JavaScript, CSS, Reddit API, Mastodon API, Bluesky API.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">AI-Driven EdTech Learning Channel (2024)</h3>
-        <p>Automates generation of PowerPoint, text-to-speech, and video resources from apprenticeship KSB data. Built using Narakeet.com and Canva to demonstrate AI-assisted content creation for digital learning.</p>
-        <p><strong>Key features:</strong> Automated media generation, TTS integration, accessibility-focused resource design.</p>
-        <p><strong>Technologies:</strong> Python, Narakeet API, HTML, JavaScript, Canva.</p>
+        <p class="card-text">Automates generation of PowerPoint, text-to-speech, and video resources from apprenticeship KSB data. Built using Narakeet.com and Canva to demonstrate AI-assisted content creation for digital learning.</p>
+        <p class="card-text"><strong>Key features:</strong> Automated media generation, TTS integration, accessibility-focused resource design.</p>
+        <p class="card-text"><strong>Technologies:</strong> Python, Narakeet API, HTML, JavaScript, Canva.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">Warm & Safe (2022)</h3>
-        <p>Maps UK “Warm Banks” — community venues offering warmth and support. Created in an agile team with accessible design for screen readers and full CRUD capabilities.</p>
-        <p><strong>Key features:</strong> Geolocation and map visualisation, full CRUD functionality, accessibility compliance.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenStreetMap API, Leaflet.js, Express, Node.js, MongoDB, JWT.</p>
+        <p class="card-text">Maps UK “Warm Banks” — community venues offering warmth and support. Created in an agile team with accessible design for screen readers and full CRUD capabilities.</p>
+        <p class="card-text"><strong>Key features:</strong> Geolocation and map visualisation, full CRUD functionality, accessibility compliance.</p>
+        <p class="card-text"><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenStreetMap API, Leaflet.js, Express, Node.js, MongoDB, JWT.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">Smart Wardrobe (2021)</h3>
-        <p>A computer-vision web app recognising clothing and suggesting weather-appropriate outfits, integrating AWS Rekognition with OpenWeather APIs for personalised recommendations.</p>
-        <p><strong>Key features:</strong> Image recognition, weather integration, responsive interface.</p>
-        <p><strong>Technologies:</strong> LAMP stack, AWS Rekognition, MySQL, PHP.</p>
+        <p class="card-text">A computer-vision web app recognising clothing and suggesting weather-appropriate outfits, integrating AWS Rekognition with OpenWeather APIs for personalised recommendations.</p>
+        <p class="card-text"><strong>Key features:</strong> Image recognition, weather integration, responsive interface.</p>
+        <p class="card-text"><strong>Technologies:</strong> LAMP stack, AWS Rekognition, MySQL, PHP.</p>
         <a href="template.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
     </section>
@@ -153,7 +185,7 @@
 
     <section id="experience">
       <h2>Experience</h2>
-
+      <!-- same experience as previous version -->
       <h3>Digital Learning Consultant – QA Ltd (Feb 2025 – Present, Remote)</h3>
       <ul>
         <li>Coach and mentor apprentices on the BSc (Hons) Digital & Technology Solutions Degree Apprenticeship across software, data, IT consultancy, and business analysis.</li>
@@ -197,6 +229,17 @@
     <section id="skills">
       <h2>Programming Languages & Tools</h2>
       <p>Python (AI, NLP, Data) · Flask · HTML · CSS · JavaScript · Bootstrap · React · Node.js · Express · MySQL · MongoDB · LAMP Stack · Git/GitHub · Bash · Hugging Face · REST APIs · Leaflet.js · AWS (S3, Rekognition) · C# · Power BI · Data Modelling · AI Ethics</p>
+    </section>
+
+    <hr>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li><strong>French</strong> – Fluent, degree level</li>
+        <li><strong>German</strong> – Fluent, degree level</li>
+        <li><strong>Russian</strong> – Beginner (Duolingo)</li>
+      </ul>
     </section>
 
     <hr>
