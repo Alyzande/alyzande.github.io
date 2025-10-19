@@ -9,6 +9,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -25,42 +26,96 @@
       background: var(--gardenia);
       color: var(--cobblestone);
     }
-    a { color: var(--mocha); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    #sideNav {
-      position: fixed; top: 0; left: 0; width: 250px; height: 100%;
-      background-color: var(--mocha); color: #fff;
-      display: flex; flex-direction: column; align-items: center;
-      padding: 1rem;
+    h1, h2, h3 {
+      font-family: 'Faculty Glyphic', serif;
+      letter-spacing: 0.5px;
+      color: var(--mocha);
     }
-    #sideNav ul { list-style: none; padding: 0; margin-top: 1rem; width: 100%; text-align: center; }
+
+    a { color: var(--mocha); text-decoration: none; transition: all 0.25s ease; }
+    a:hover { text-decoration: underline; transform: translateY(-1px); }
+
+    /* Sidebar */
+    #sideNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: linear-gradient(180deg, #A47764 0%, #B98876 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      box-shadow: 4px 0 12px rgba(0,0,0,0.08);
+      z-index: 100;
+    }
+
+    #sideNav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
     #sideNav li { margin: .75rem 0; }
     #sideNav a { color: #fff; font-weight: 500; }
     #sideNav a:hover { color: var(--gardenia); }
 
-    .container { margin-left: 250px; padding: 2rem 3rem; max-width: 900px; }
+    .container {
+      margin-left: 250px;
+      padding: 2rem 3rem;
+      max-width: 900px;
+    }
+
     header.hero { margin-bottom: 3rem; }
-    header.hero h1 { font-size: 2.6rem; color: var(--viola); font-weight: 700; }
-    header.hero h2 { color: var(--viola); font-size: 1.2rem; margin-top: 0.5rem; }
-    header.hero .subheading { color: var(--cobblestone); margin-top: 0.5rem; font-weight: 500; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    header.hero h1 {
+      font-size: 2.6rem;
+      color: var(--viola);
+      font-weight: 700;
+    }
+    header.hero h2 {
+      color: var(--viola);
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    header.hero .subheading {
+      color: var(--cobblestone);
+      margin-top: 0.5rem;
+      font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
     .social-inline a { margin-left: 0.5rem; color: var(--mocha); font-size: 1.2rem; }
 
-    section { margin-bottom: 3rem; }
-    h2, h3 { font-weight: 600; color: var(--mocha); }
-    ul { margin-left: 1.5rem; } li { margin: 0.3rem 0; }
-    hr { border: none; border-top: 1px solid var(--rosetan); margin: 2rem 0; }
+    section {
+      background: rgba(255,255,255,0.65);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rosetan);
+      margin: 2rem 0;
+    }
 
     .project-card {
-      background: var(--gardenia);
-      border: 1px solid var(--rosetan);
+      background: #fff;
+      border: 1px solid rgba(209,156,151,0.3);
       border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
-      transition: box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .project-card:hover {
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
     .card-title { color: var(--mocha); font-weight: 600; }
     .card-text { color: var(--mocha); }
@@ -77,10 +132,19 @@
       background-color: var(--mocha);
       border-color: var(--mocha);
       color: #fff;
+      transform: translateY(-2px);
     }
 
     @media(max-width: 768px) {
-      #sideNav { position: relative; width: 100%; height: auto; flex-direction: row; justify-content: space-around; }
+      #sideNav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: none;
+        background: var(--mocha);
+      }
       .container { margin: 0; padding: 1.5rem; }
       #sideNav ul { display: flex; flex-wrap: wrap; justify-content: center; }
     }
@@ -125,10 +189,9 @@
     <section id="projects">
       <h2>Selected Projects</h2>
 
-      <!-- Each project card -->
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">Shadow Fleet Tracker — Maritime Intelligence Platform (2025)</h3>
-        <p class="card-text">A real-time maritime intelligence system detecting and visualising suspicious vessel activity using global AIS data. Combines Python geospatial analysis with Leaflet.js dashboards for maritime monitoring near critical undersea infrastructure.</p>
+        <p class="card-text">A real-time maritime intelligence system detecting and visualising suspicious vessel activity using global AIS data.</p>
         <a href="shadow-fleet-tracker.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
@@ -140,7 +203,7 @@
 
       <div class="card project-card"><div class="card-body">
         <h3 class="card-title">VKontakte News Sentiment Analyser (2025)</h3>
-        <p class="card-text">Extends the Russian sentiment bot to VKontakte by analysing domestic news-agency headlines related to the Ukraine conflict. Aggregates sentiment to measure public tone within Russian media environments.</p>
+        <p class="card-text">Extends the Russian sentiment bot to VKontakte by analysing domestic news-agency headlines related to the Ukraine conflict.</p>
         <a href="vk-sentiment-analyser.html" class="btn btn-alyzande btn-sm">View Project</a>
       </div></div>
 
@@ -173,7 +236,7 @@
 
     <section id="experience">
       <h2>Experience</h2>
-      <!-- Experience content (unchanged) -->
+      <!-- Experience content here -->
     </section>
 
     <hr>
