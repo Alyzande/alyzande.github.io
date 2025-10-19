@@ -1,1 +1,126 @@
-smart-wardrobe.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smart Wardrobe by Alyzande Renard – a computer-vision wardrobe management app using AWS Rekognition.">
+  <meta name="author" content="Alyzande Renard">
+  <title>Smart Wardrobe | Alyzande Renard MSc MBCS</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --mocha: #A47764;
+      --rosetan: #D19C97;
+      --gardenia: #F7F3EE;
+      --viola: #8C6FA6;
+      --cobblestone: #A89A8E;
+    }
+
+    body {
+      background-color: var(--gardenia);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--cobblestone);
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    .project-header h1 {
+      color: var(--viola);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-header h3 {
+      color: var(--rosetan);
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-alyzande {
+      border: 1px solid var(--rosetan);
+      color: #fff;
+      background-color: var(--rosetan);
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-alyzande:hover {
+      background-color: var(--mocha);
+      border-color: var(--mocha);
+      color: #fff;
+    }
+
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--cobblestone);
+      margin-top: 3rem;
+    }
+
+    a {
+      color: var(--viola);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--mocha);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="project-header text-center">
+      <h1>Smart Wardrobe</h1>
+      <h3>Real-World Problem Solving through Computer Vision and Sustainable Design</h3>
+      <p><strong>Year:</strong> 2022</p>
+      <p><strong>Technologies:</strong> LAMP Stack (Linux, Apache, MySQL, PHP), C#, AWS Rekognition, Computer Vision</p>
+    </div>
+
+    <div class="project-content">
+      <h2>Rationale &amp; Purpose</h2>
+      <p>The Smart Wardrobe project began with an everyday frustration that turned into a technical challenge. Inspired by the visual carousels used on McDonald’s touchscreen kiosks, Alyzande saw the potential for a similar interface to bring order to her “floordrobe” at home. The goal was to create a digital wardrobe that let users see what they owned, plan outfits, and reduce overbuying caused by visual clutter or forgotten garments.</p>
+
+      <p>This project represents Alyzande’s pragmatic approach to technology: every feature originated from a tangible personal problem and was developed into a scalable, human-centred solution. The Smart Wardrobe exemplifies how real-world frustration can become a driver for applied innovation, where computer vision and data systems are used not as novelty but as tools to simplify life and promote sustainability.</p>
+
+      <p>The system was designed as a full-stack CRUD web application, hosted on a LAMP stack with a MySQL database and a carousel-based front end. It allowed users to catalogue clothing, track usage frequency, and calculate cost per wear. This supported more sustainable fashion decisions and reduced unnecessary purchases. Alyzande then extended the concept with AWS Rekognition, using computer vision to automatically identify and categorise garments from webcam images. This feature allowed the wardrobe to populate itself, bringing AI efficiency into a domestic sustainability tool.</p>
+
+      <p>The project also contributed to Alyzande’s MSc research, where Rekognition’s accuracy was compared to emerging academic models in clothing recognition. The results showed that AWS Rekognition performed competitively while being accessible for practical consumer applications.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Full CRUD web app enabling users to add, edit, and remove wardrobe items.</li>
+        <li>Touchscreen carousel interface for intuitive browsing and outfit planning.</li>
+        <li>Automatic clothing recognition using <strong>AWS Rekognition</strong> for live garment tagging.</li>
+        <li>Cost-per-wear tracking and sustainability metrics to highlight clothing value and reduce waste.</li>
+        <li>Data-driven design promoting responsible consumer behaviour and minimising fast-fashion impact.</li>
+      </ul>
+
+      <h2>Technical Details</h2>
+      <p>Built using the <strong>LAMP stack</strong> (Linux, Apache, MySQL, PHP) with a C#-driven front end. Integrated <strong>AWS Rekognition</strong> for real-time image classification and tagging. The application stored metadata such as brand, colour, and last-worn date to enable analytics and environmental insights. The code structure prioritised scalability, modularity, and the ability to integrate future IoT sensors or wardrobe-mounted tablets.</p>
+
+      <h2>Links</h2>
+      <p><a href="https://github.com/Alyzande/SmartWardrobe" class="btn btn-alyzande">View GitHub Repository</a></p>
+    </div>
+
+    <footer>
+      <p><a href="../index.html" class="btn btn-alyzande">← Back to Portfolio</a></p>
+      <p>© 2025 Alyzande Renard MSc MBCS</p>
+    </footer>
+  </div>
+</body>
+</html>
